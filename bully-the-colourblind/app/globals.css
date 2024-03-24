@@ -6,8 +6,8 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 44, 44, 44; /*chatgpt's dark gray*/
+  --background-end-rgb: 44, 44, 44;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -43,8 +43,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 50, 50, 50;
+    --background-end-rgb: 50, 50, 50;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -87,18 +87,58 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: black;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
+.Canvas {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #121212;
+  border: solid;
+  border-color: #C88827;
+  border-width: 2px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.GuessColour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ColourName {
+  padding: 13px;
+  text-align: center;
+  align-items: center;
+}
+
+.ColourWheel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  gap: 30px;
+}
+
+button {
+  cursor: pointer;
+  padding: 15px 30px;
+  border: solid;
+  border-color: #C88827;
+  border-width: 2px;
+  border-radius: 15px;
+  background-color: 121212;
+  font-size: 20px;
+  align-items: center;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
